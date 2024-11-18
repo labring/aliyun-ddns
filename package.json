@@ -1,0 +1,28 @@
+{
+  "name": "web02",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "start": "node dist/app.js",
+    "build": "tsc",
+    "dev": "tsc --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@alicloud/alidns20150109": "2.0.1",
+    "@alicloud/darabonba-env": "^1.0.0",
+    "@alicloud/openapi-client": "^0.3.0",
+    "@alicloud/tea-console": "^1.0.0",
+    "@alicloud/tea-typescript": "latest",
+    "@alicloud/tea-util": "^1.4.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.9.0",
+    "typescript": "^5.6.3"
+  }
+}
