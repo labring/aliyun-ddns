@@ -2,6 +2,7 @@
 
 一个基于 Express 的 Web 服务，用于自动更新阿里云 DNS 记录。该服务特别适用于需要动态 DNS 更新的场景，支持 IPv4 (A记录) 和 IPv6 (AAAA记录) 的更新。
 
+
 ## 功能特点
 
 - 支持 IPv4 和 IPv6 记录更新
@@ -29,6 +30,31 @@ ACCESS_KEY_SECRET=your-secret # 阿里云 AccessKey Secret
 DOMAIN=example.com # 要管理的域名
 ```
 
+
+## 开发和运行
+
+### 安装依赖
+```bash
+npm install
+```
+
+### 开发模式
+```bash
+npm run dev
+```
+此命令会启动 TypeScript 编译器的监听模式，自动编译变更的文件。
+
+### 构建项目
+```bash
+npm run build
+```
+此命令会将 TypeScript 代码编译为 JavaScript。
+
+### 运行服务
+```bash
+npm start
+```
+此命令会启动编译后的服务。
 
 
 ## API 使用说明
