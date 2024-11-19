@@ -69,17 +69,17 @@ npm start
 - `key`: API 密钥（必需）
 - `server`: 子域名前缀（必需）
 - `ip`: 新的 IP 地址（必需）
-- `type`: 记录类型（可选，默认为 'ipv6'）
-  - 可选值: 'ipv4' 或 'ipv6'
+- `type`: 记录类型（可选，默认为 'AAAA'）
+  - 可选值: 'A' 或 'AAAA'
 
 **示例请求:**
 
 ```bash
 # IPv6 更新
-curl "http://localhost:3000/change-ip?key=your-api-key&server=test&ip=2001:db8::1"
+curl "http://localhost:3000/change-ip?key=your-api-key&server=test&ip=2001:db8::1&type=AAAA"
 
 # IPv4 更新
-curl "http://localhost:3000/change-ip?key=your-api-key&server=test&ip=192.168.1.1&type=ipv4"
+curl "http://localhost:3000/change-ip?key=your-api-key&server=test&ip=192.168.1.1&type=A"
 ```
 
 **成功响应:**

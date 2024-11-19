@@ -64,14 +64,14 @@ app.get('/change-ip', async (req: Request, res: Response): Promise<any> => {
     // Get and validate required parameters
     const server = req.query.server as string;
     const ip = req.query.ip as string;
-    const type = (req.query.type as string) || 'ipv6';
+    const type = (req.query.type as string) || 'AAAA';
 
     if (!server || !ip) {
       return res.status(400).json({ error: 'Missing required parameters' });
     }
 
     // Validate record type
-    if (type !== 'ipv4' && type !== 'ipv6') {
+    if (type !== 'A' && type !== 'AAAA') {
       return res.status(400).json({ error: 'Invalid record type' });
     }
 
@@ -84,7 +84,7 @@ app.get('/change-ip', async (req: Request, res: Response): Promise<any> => {
     const fullDomain = `${server}.${domain}`
 
     // Set record type
-    const recordType = type === 'ipv4' ? 'A' : 'AAAA';
+    const recordType = type;
 
     
     console.log(`[${new Date().toISOString()}] Processing request for domain: ${fullDomain}, IP: ${ip}, Type: ${recordType}`);
